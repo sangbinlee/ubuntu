@@ -1,0 +1,93 @@
+
+# rest-restart.sh
+  sangbinlee@ns1:/lib/systemd/system$ vi /home/sangbinlee/app/deploy/rest-restart.sh
+  #!/usr/bin/env bash
+  echo "PID Check..."
+  CURRENT_PID=$(ps -ef | grep java | grep rest* | awk '{print $2}')
+
+  echo "Running PID: {$CURRENT_PID}"
+
+  if "$CURRENT_PID" [ -z CURRENT_PID ] ; then
+          echo "Project is not running"
+  else
+          kill -9 $CURRENT_PID
+          sleep 10
+  fi
+
+  echo "Deploy Project...."
+
+  java -jar -Dspring.profiles.active=local /home/sangbinlee/app/deploy/rest-0.0.1-SNAPSHOT.jar &
+
+  echo "rest api END..."
+  echo "rest api DEPLOY END..."
+  ~
+  ~
+  ~
+
+
+
+
+
+
+
+
+
+
+
+# vi rest.service
+
+
+  [Unit]
+  Description=rest service
+
+  [Service]
+  WorkingDirectory=/home/sangbinlee
+  ExecStart=/home/sangbinlee/app/deploy/rest-restart.sh
+  Type=simple
+  User=sangbinlee
+  Restart=always
+
+  [Install]
+  WantedBy=multi-user.target
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
+  sangbinlee@ns1:/lib/systemd/system$ sudo vi rest.service
+  sangbinlee@ns1:/lib/systemd/system$ systemctl daemon-reload
+  ==== AUTHENTICATING FOR org.freedesktop.systemd1.reload-daemon ===
+  Authentication is required to reload the systemd state.
+  Authenticating as: sangbinlee
+  Password:
+  ==== AUTHENTICATION COMPLETE ===
+  sangbinlee@ns1:/lib/systemd/system$ sudo systemctl daemon-reload
+  sangbinlee@ns1:/lib/systemd/system$ sudo systemctl enable rest
+  Created symlink /etc/systemd/system/multi-user.target.wants/rest.service → /lib/systemd/system/rest.service.
+  sangbinlee@ns1:/lib/systemd/system$ sudo systemctl start rest
+  sangbinlee@ns1:/lib/systemd/system$ sudo systemctl status rest
+  ● rest.service - rest service
+       Loaded: loaded (/lib/systemd/system/rest.service; enabled; vendor preset: enabled)
+       Active: active (running) since Mon 2022-01-31 03:34:06 KST; 2s ago
+     Main PID: 169192 (bash)
+        Tasks: 2 (limit: 9199)
+       Memory: 1.3M
+       CGroup: /system.slice/rest.service
+               ├─169192 bash /home/sangbinlee/app/deploy/rest-restart.sh
+               └─169199 sleep 10
+
+  Jan 31 03:34:06 ns1 systemd[1]: Started rest service.
+  Jan 31 03:34:06 ns1 rest-restart.sh[169192]: PID Check...
+  Jan 31 03:34:06 ns1 rest-restart.sh[169192]: Running PID: {163031}
+  Jan 31 03:34:06 ns1 rest-restart.sh[169198]: /home/sangbinlee/app/deploy/rest-restart.sh: line 7: 163031: command not found
+  Jan 31 03:34:06 ns1 rest-restart.sh[169192]: /home/sangbinlee/app/deploy/rest-restart.sh: line 10: kill: (163031) - Operation not perm>
+  lines 1-15/15 (END)
