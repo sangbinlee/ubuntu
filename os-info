@@ -1,0 +1,10 @@
+# uname -a
+
+  sangbinlee@ns1:~/app/deploy$ uname -a
+  Linux ns1 5.4.0-92-generic #103-Ubuntu SMP Fri Nov 26 16:13:00 UTC 2021 x86_64 x86_64 x86_64 GNU/Linux
+
+
+# cat /etc/redhat-release 
+
+  [sangbinlee@ora18c deploy]$ cat /etc/redhat-release
+  CentOS Linux release 7.8.2003 (Core)
