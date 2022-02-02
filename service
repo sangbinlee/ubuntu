@@ -25,6 +25,24 @@
   ~
 
 
+# rest.service
+[sangbinlee@ora18c ~]$ sudo vi /lib/systemd/system/rest.service
+
+
+    [Unit]
+    Description=rest service
+
+     [Service]
+     WorkingDirectory=/home/sangbinlee
+     ExecStart=/bin/bash -c "exec java -Dspring.profiles.active=local -jar /home/sangbinlee/app/deploy/rest-0.0.1-SNAPSHOT.jar"
+     User=sangbinlee
+
+    [Install]
+    WantedBy=multi-user.target
+
+~
+
+
 
 
 
