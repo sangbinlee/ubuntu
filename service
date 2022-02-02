@@ -70,10 +70,17 @@
   Authenticating as: sangbinlee
   Password:
   ==== AUTHENTICATION COMPLETE ===
+  
+  
+  
   sangbinlee@ns1:/lib/systemd/system$ sudo systemctl daemon-reload
+  
   sangbinlee@ns1:/lib/systemd/system$ sudo systemctl enable rest
   Created symlink /etc/systemd/system/multi-user.target.wants/rest.service → /lib/systemd/system/rest.service.
+  
   sangbinlee@ns1:/lib/systemd/system$ sudo systemctl start rest
+  
+  
   sangbinlee@ns1:/lib/systemd/system$ sudo systemctl status rest
   ● rest.service - rest service
        Loaded: loaded (/lib/systemd/system/rest.service; enabled; vendor preset: enabled)
