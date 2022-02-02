@@ -7,3 +7,8 @@
 
 
   firewall-cmd --zone=public --list-all
+
+
+
+
+# nc 1xx.1xx.2xx.1xx 22
