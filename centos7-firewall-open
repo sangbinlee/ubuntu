@@ -1,0 +1,9 @@
+# open 8080
+  firewall-cmd --zone=public --permanent --add-port=8080/tcp
+
+
+
+  firewall-cmd --reload
+
+
+  firewall-cmd --zone=public --list-all
