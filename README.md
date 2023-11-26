@@ -1,3 +1,37 @@
+# ubuntu 
+
+
+# Ubuntu 20.04 server: turn off screen until I press a key
+
+     https://askubuntu.com/questions/1244358/ubuntu-20-04-server-turn-off-screen-until-i-press-a-key/1312193#1312193
+     
+    
+    SOLUTION (verified with Ubuntu 20.04 server running on a laptop)
+    
+    Create a file:
+    
+    sudo nano /etc/systemd/system/enable-console-blanking.service
+    And put this into the file:
+    
+    [Unit]
+    Description=Enable virtual console blanking
+    
+    [Service]
+    Type=oneshot
+    Environment=TERM=linux
+    StandardOutput=tty
+    TTYPath=/dev/console
+    ExecStart=/usr/bin/setterm -blank 1
+    
+    [Install]
+    WantedBy=multi-user.target
+    Then change the file rights and enable the service:
+    
+    sudo chmod 664 /etc/systemd/system/enable-console-blanking.service
+    sudo systemctl enable enable-console-blanking.service
+    And reboot the server. Now the screens blanks after 1 minute without keypresses, even before the login.
+
+
 # ubuntu
     dev set
 
