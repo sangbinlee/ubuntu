@@ -56,10 +56,17 @@
 
 
 
+#  yarn start 백그라운드 로 실행하기 
+
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/bdb79613-c63d-464a-8693-c443192995a4)
+
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/827d3d96-a337-47f6-afef-c0982e822f6c)
 
 
 
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/3e12a147-15d8-4a17-bd3f-d9fed019fd38)
 
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/c8b0cbf4-d450-4113-b8e2-1dcca431b853)
 
 
 
