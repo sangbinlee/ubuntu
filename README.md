@@ -33,6 +33,7 @@
 
 ![image](https://github.com/sangbinlee/ubuntu/assets/4024414/668f8675-e82a-4c74-b4d0-336fd2c79e20)
 
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/e4840303-f4c9-4fbe-beaf-c214101dac23)
 
 
 # 우분투 서버 부팅 후 1분 후에 모니터 끄고 ssh 접속 
