@@ -57,6 +57,7 @@
 
 
 #  yarn start 백그라운드 로 실행하기 
+# yarn start&
 
 ![image](https://github.com/sangbinlee/ubuntu/assets/4024414/bdb79613-c63d-464a-8693-c443192995a4)
  
