@@ -32,6 +32,35 @@
     And reboot the server. Now the screens blanks after 1 minute without keypresses, even before the login.
 
 
+
+
+# 우분투 서버 부팅 후 1분 후에 모니터 끄고 ssh 접속 
+
+     1. 디비 실행
+     2. next start
+     
+     
+     root@ns1:/home/sangbinlee9/front-end/mini-do# vi docker-compose.yml
+     root@ns1:/home/sangbinlee9/front-end/mini-do# docker compose up -d
+     [+] Running 1/1
+      ✔ Container mini-do-postgres-1  Started                                                                                                                 0.0s
+     root@ns1:/home/sangbinlee9/front-end/mini-do# yarn start
+     yarn run v1.22.21
+     $ next start
+        ▲ Next.js 14.0.3
+        - Local:        http://localhost:3000
+     
+      ✓ Ready in 419ms
+
+
+
+
+
+
+
+
+
+
 # ubuntu
     dev set
 
