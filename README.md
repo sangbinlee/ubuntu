@@ -31,6 +31,7 @@
     sudo systemctl enable enable-console-blanking.service
     And reboot the server. Now the screens blanks after 1 minute without keypresses, even before the login.
 
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/668f8675-e82a-4c74-b4d0-336fd2c79e20)
 
 
 
