@@ -1,6 +1,6 @@
 # docker compose down
 
-cat
+![image](https://github.com/sangbinlee/ubuntu/assets/4024414/f665714d-40ae-4195-a926-0129191d6c6e)
 
 
 
