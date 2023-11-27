@@ -1,3 +1,9 @@
+# docker compose down
+
+cat
+
+
+
 # ubuntu 
 
 
@@ -104,3 +110,4 @@
       1            /usr/lib/jvm/java-11-openjdk-amd64/bin/java      1111      manual mode
     * 2            /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java   1081      manual mode
 
+#
